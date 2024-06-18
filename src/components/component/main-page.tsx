@@ -26,6 +26,7 @@ To read more about using these font, please visit the Next.js documentation:
 import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
+import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet"
 import Image from "next/image";
 import ContactPage from "../contact/contact";
 export function MainPage() {
@@ -37,39 +38,7 @@ export function MainPage() {
           <span className="text-[#4caf50] p-2 font-bold text-xl">Sauvage Com</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6 items-center text-[#4caf50]">
-          <div className="lg:hidden text-[#4caf50]">
-            <DropdownMenu >
-              <DropdownMenuTrigger asChild>
-                <Button className="rounded-full" size="icon" variant="ghost">
-                  <MenuIcon className="h-6 w-6" />
-                  <span className="sr-only">Toggle navigation</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-64">
-               
-                <DropdownMenuItem>
-                  <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
-                    À propos
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link className="text-sm font-medium hover:underline underline-offset-4" href="#services">
-                    Services
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link className="text-sm font-medium hover:underline underline-offset-4" href="#projects">
-                    Projets
-                  </Link>
-                </DropdownMenuItem>             
-                <DropdownMenuItem>
-                  <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
-                    Contact
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
+          
           <div className="hidden lg:flex">
            
             <Link className="text-sm font-medium hover:underline underline-offset- mx-5" href="#about">
@@ -87,6 +56,32 @@ export function MainPage() {
             </Link>
           </div>
         </nav>
+        <Sheet>
+            <SheetTrigger asChild>
+              <Button className="md:hidden" size="icon" variant="ghost">
+                <MenuIcon className="h-6 w-6" />
+                <span className="sr-only  ">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent className="w-full max-w-xs bg-gray-100 dark:bg-gray-800 p-6" side="right">
+              <div className="flex flex-col gap-6">
+              <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#about">
+                  À propos
+                </Link>
+                <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#services">
+                  Services
+                </Link>
+                <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#projects">
+                  Projets
+                </Link>
+                
+                <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#contact">
+                  Contact
+                </Link>
+                
+              </div>
+            </SheetContent>
+          </Sheet>
       </header>
       <main className="flex-1">
         <section className="flex justify-center pt-40 w-full py-12 md:py-24 lg:py-32 bg-[#e8f5e9] dark:bg-[#1b5e20]">
