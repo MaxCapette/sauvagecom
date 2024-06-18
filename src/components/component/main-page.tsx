@@ -26,7 +26,7 @@ To read more about using these font, please visit the Next.js documentation:
 import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
-import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet"
+import { SheetTrigger, SheetContent, Sheet, SheetClose } from "@/components/ui/sheet"
 import Image from "next/image";
 import ContactPage from "../contact/contact";
 export function MainPage() {
@@ -65,20 +65,26 @@ export function MainPage() {
             </SheetTrigger>
             <SheetContent className="w-full max-w-xs bg-gray-100 dark:bg-gray-800 p-6" side="right">
               <div className="flex flex-col gap-6">
+                <SheetClose asChild>
               <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#about">
                   À propos
                 </Link>
+                </SheetClose>
+                <SheetClose asChild>
                 <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#services">
                   Services
                 </Link>
+                </SheetClose>
+                <SheetClose asChild>
                 <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#projects">
                   Projets
                 </Link>
-                
+                </SheetClose>
+                <SheetClose asChild>
                 <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#contact">
                   Contact
                 </Link>
-                
+                </SheetClose>
               </div>
             </SheetContent>
           </Sheet>
