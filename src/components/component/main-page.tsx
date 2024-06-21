@@ -69,6 +69,7 @@ export function MainPage() {
               <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#about">
                   À propos
                 </Link>
+                
                 </SheetClose>
                 <SheetClose asChild>
                 <Link className="font-medium hover:text-gray-900 dark:hover:text-gray-50" href="#services">
