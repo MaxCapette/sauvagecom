@@ -286,7 +286,7 @@ export function MainPage() {
           <p className="   ">06000 NICE</p>
           <p className="  mt-4 ">contact@sauvage-com.fr</p>
 
-          <p className="  mt-4 ">TEL: 01 89 70 36 47</p>
+          <p className="  mt-4 ">TEL: 04 22 13 02 90 </p>
           </div>
        
       </footer>
